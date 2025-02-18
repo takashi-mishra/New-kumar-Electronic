@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="product-container" id="product-container">
+
+  </div>
+
+  <script>
+    const data = {
+  "AC": [
+  {
+    id: 1,
+    name: "LG Dual Inverter Window AC",
+    price: 449.99,
+    description:
+      "12,000 BTU window air conditioner with dual inverter compressor. Features Wi-Fi connectivity and voice control.",
+    company: "LG",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 2,
+    name: "Frigidaire Cool Connect Smart AC",
+    price: 549.99,
+    description:
+      "10,000 BTU smart portable air conditioner. Features Wi-Fi connectivity and compatible with Alexa and Google Assistant.",
+    company: "Frigidaire",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 3,
+    name: "Mitsubishi Electric Wall-Mounted AC",
+    price: 1299.99,
+    description:
+      "18,000 BTU wall-mounted split system air conditioner. Features inverter technology and 3D i-see Sensor for optimal comfort.",
+    company: "Mitsubishi Electric",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 4,
+    name: "Daikin Emura Ductless AC",
+    price: 1599.99,
+    description:
+      "15,000 BTU ductless mini-split air conditioner. Features sleek design and intelligent eye sensor for energy savings.",
+    company: "Daikin",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 5,
+    name: "Carrier Infinity Central AC",
+    price: 2499.99,
+    description:
+      "3-ton central air conditioner with up to 20.5 SEER rating. Features Greenspeed intelligence for optimal efficiency.",
+    company: "Carrier",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 6,
+    name: "LG Portable Air Conditioner",
+    price: 399.99,
+    description:
+      "8,000 BTU portable air conditioner with dehumidifier. Features auto evaporation system and 24-hour timer.",
+    company: "LG",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 7,
+    name: "Frigidaire Gallery Window AC",
+    price: 379.99,
+    description:
+      "10,000 BTU window air conditioner with Wi-Fi connectivity. Features clean air ionizer and energy saver mode.",
+    company: "Frigidaire",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 8,
+    name: "Mitsubishi Heavy Industries Ceiling Cassette AC",
+    price: 1899.99,
+    description: "24,000 BTU ceiling cassette air conditioner. Features 360-degree airflow and optional motion sensor.",
+    company: "Mitsubishi Heavy Industries",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 9,
+    name: "Daikin Fit Smart HVAC System",
+    price: 3299.99,
+    description: "3-ton smart HVAC system with up to 18 SEER rating. Features compact design and quiet operation.",
+    company: "Daikin",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 10,
+    name: "Carrier Ductless Mini-Split AC",
+    price: 1099.99,
+    description: "12,000 BTU ductless mini-split air conditioner. Features follow me remote control and sleep mode.",
+    company: "Carrier",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 11,
+    name: "LG Art Cool Mirror AC",
+    price: 1799.99,
+    description: "18,000 BTU art cool mirror finish air conditioner. Features Wi-Fi connectivity and voice control.",
+    company: "LG",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 12,
+    name: "Frigidaire Low Profile Window AC",
+    price: 319.99,
+    description:
+      "6,000 BTU low profile window air conditioner. Features clean air ionizer and programmable 24-hour timer.",
+    company: "Frigidaire",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 13,
+    name: "Mitsubishi Electric Floor-Mounted AC",
+    price: 1499.99,
+    description:
+      "15,000 BTU floor-mounted air conditioner. Features hyper-heating technology for efficient operation in cold climates.",
+    company: "Mitsubishi Electric",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 14,
+    name: "Daikin Stylish Wall-Mounted AC",
+    price: 1399.99,
+    description:
+      "12,000 BTU wall-mounted air conditioner with sleek design. Features 3-D airflow and intelligent thermal sensor.",
+    company: "Daikin",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 15,
+    name: "Carrier Performance Central AC",
+    price: 1999.99,
+    description:
+      "2-ton central air conditioner with up to 17 SEER rating. Features WeatherArmor Ultra protection for long-lasting performance.",
+    company: "Carrier",
+    image:
+      "https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  ]
+}
+ 
+  
+  // Function to generate product cards
+  function displayProducts() {
+    const productContainer = document.getElementById("product-container");
+  
+    data.AC.forEach((product) => {
+      const productCard = document.createElement("div");
+      productCard.classList.add("product-card");
+  
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-details">
+          <h2>${product.name}</h2>
+          <p>${product.description}</p>
+          <p class="price">$${product.price}</p>
+          <a href="product-detail.html?id=${product.id}">View Details</a>
+        </div>
+      `;
+  
+      productContainer.appendChild(productCard);
+    });
+  }
+  
+  // Call the function to display products
+  displayProducts();
+  </script>
+</body>
+</html>

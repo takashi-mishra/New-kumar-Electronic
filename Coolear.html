@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="product-container" id="product-container">
+
+  </div>
+
+  <script>
+    const data = {
+  "coolear": [
+  {
+    id: 1,
+    name: "Symphony Diet 12T Personal Air Cooler",
+    price: 149.99,
+    description:
+      "12-liter personal air cooler with honeycomb cooling pads. Features 3-speed fan and ice chamber for enhanced cooling.",
+    company: "Symphony",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 2,
+    name: "Honeywell Indoor/Outdoor Portable Evaporative Cooler",
+    price: 299.99,
+    description:
+      "525 CFM indoor/outdoor evaporative air cooler. Features 3 fan speeds, low water alarm, and remote control.",
+    company: "Honeywell",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 3,
+    name: "Bajaj Platini PX97 Torque Personal Air Cooler",
+    price: 89.99,
+    description: "36-liter personal air cooler with Turbo Fan Technology. Features 3-speed control and ice chamber.",
+    company: "Bajaj",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 4,
+    name: "Crompton Ozone Desert Air Cooler",
+    price: 199.99,
+    description: "55-liter desert air cooler with Everlast Pump. Features auto-fill function and 4-way air deflection.",
+    company: "Crompton",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 5,
+    name: "Kenstar Little Cooler DX Personal Cooler",
+    price: 79.99,
+    description:
+      "22-liter personal air cooler with honeycomb cooling media. Features 2-way deflection and high-speed blower.",
+    company: "Kenstar",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 6,
+    name: "Symphony Ice Cube XL Residential Air Cooler",
+    price: 229.99,
+    description:
+      "60-liter air cooler with i-Pure technology. Features multistage air purification and high-density honeycomb pads.",
+    company: "Symphony",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 7,
+    name: "Honeywell CL30XC Indoor Portable Evaporative Air Cooler",
+    price: 249.99,
+    description: "470 CFM indoor portable evaporative air cooler. Features low water alarm and carbon dust air filter.",
+    company: "Honeywell",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 8,
+    name: "Bajaj MD2020 54L Window Air Cooler",
+    price: 179.99,
+    description:
+      "54-liter window air cooler with TurboFan Technology. Features 3-speed control and anti-bacterial hexacool technology.",
+    company: "Bajaj",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 9,
+    name: "Crompton Optimus Desert Air Cooler",
+    price: 239.99,
+    description: "100-liter desert air cooler with everlast pump. Features auto swing and high-density honeycomb pads.",
+    company: "Crompton",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 10,
+    name: "Kenstar Double Cool DX 50L Air Cooler",
+    price: 159.99,
+    description:
+      "50-liter air cooler with wood wool cooling pads. Features 4-way air deflection and high-speed blower.",
+    company: "Kenstar",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 11,
+    name: "Symphony Siesta 70 XL Desert Air Cooler",
+    price: 279.99,
+    description:
+      "70-liter desert air cooler with i-Pure technology. Features multistage air purification and dura-pump technology.",
+    company: "Symphony",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 12,
+    name: "Honeywell TC50PEU Portable Evaporative Air Cooler",
+    price: 199.99,
+    description: "230 CFM portable evaporative air cooler. Features detachable water tank and low water alarm.",
+    company: "Honeywell",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 13,
+    name: "Bajaj PCF 25DLX Personal Air Cooler",
+    price: 69.99,
+    description: "24-liter personal air cooler with 3-speed control. Features ice chamber and 4-way air deflection.",
+    company: "Bajaj",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 14,
+    name: "Crompton Greaves Aura Woodwool Desert Cooler",
+    price: 189.99,
+    description:
+      "75-liter desert air cooler with auto-fill function. Features everlast pump and high-density honeycomb pads.",
+    company: "Crompton",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 15,
+    name: "Kenstar Glam 50R Personal Air Cooler",
+    price: 129.99,
+    description: "50-liter personal air cooler with honeycomb cooling pads. Features 3-speed control and ice chamber.",
+    company: "Kenstar",
+    image:
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  ]
+}
+ 
+  
+  // Function to generate product cards
+  function displayProducts() {
+    const productContainer = document.getElementById("product-container");
+  
+    data.coolear.forEach((product) => {
+      const productCard = document.createElement("div");
+      productCard.classList.add("product-card");
+  
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-details">
+          <h2>${product.name}</h2>
+          <p>${product.description}</p>
+          <p class="price">$${product.price}</p>
+          <a href="product-detail.html?id=${product.id}">View Details</a>
+        </div>
+      `;
+  
+      productContainer.appendChild(productCard);
+    });
+  }
+  
+  // Call the function to display products
+  displayProducts();
+  </script>
+</body>
+</html>

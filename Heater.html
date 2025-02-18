@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="product-container" id="product-container">
+
+  </div>
+
+  <script>
+    const data = {
+  "Heater": [
+  {
+    id: 1,
+    name: "Dyson Pure Hot+Cool",
+    price: 499.99,
+    description: "3-in-1 purifying heater and fan. Features Air Multiplier technology and HEPA filter.",
+    company: "Dyson",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 2,
+    name: "DeLonghi Oil-Filled Radiator",
+    price: 129.99,
+    description:
+      "1500W oil-filled radiator with adjustable thermostat. Features multiple heat settings and safety thermal cut-off.",
+    company: "DeLonghi",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 3,
+    name: "Lasko Ceramic Tower Heater",
+    price: 79.99,
+    description: "1500W ceramic tower heater with oscillation. Features remote control and built-in timer.",
+    company: "Lasko",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 4,
+    name: "Honeywell UberHeat Ceramic Heater",
+    price: 59.99,
+    description: "1500W ceramic heater with 2 heat settings. Features tip-over protection and adjustable thermostat.",
+    company: "Honeywell",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 5,
+    name: "Vornado Whole Room Heater",
+    price: 89.99,
+    description:
+      "1500W whole room heater with Vortex air circulation. Features 2 heat settings and adjustable thermostat.",
+    company: "Vornado",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 6,
+    name: "Dyson AM09 Hot+Cool",
+    price: 399.99,
+    description: "Fan heater with Air Multiplier technology. Features precise temperature control and sleep timer.",
+    company: "Dyson",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 7,
+    name: "DeLonghi Mica Thermic Panel Heater",
+    price: 149.99,
+    description:
+      "1500W mica thermic panel heater. Features adjustable thermostat and dual fan system for faster heating.",
+    company: "DeLonghi",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 8,
+    name: "Lasko Digital Ceramic Tower Heater",
+    price: 89.99,
+    description: "1500W digital ceramic tower heater with remote. Features 8-hour timer and widespread oscillation.",
+    company: "Lasko",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 9,
+    name: "Honeywell EnergySmart Ceramic Heater",
+    price: 79.99,
+    description:
+      "1500W EnergySmart ceramic heater. Features digital controls and 2 heat settings with auto energy saving mode.",
+    company: "Honeywell",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 10,
+    name: "Vornado AVH10 Vortex Heater",
+    price: 109.99,
+    description:
+      "1500W vortex heater with automatic climate control. Features 2 heat settings and cool-touch exterior.",
+    company: "Vornado",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 11,
+    name: "Dyson HP04 Pure Hot+Cool",
+    price: 649.99,
+    description:
+      "3-in-1 purifying heating and cooling fan. Features HEPA filter, Air Multiplier technology, and voice control.",
+    company: "Dyson",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 12,
+    name: "DeLonghi Convection Panel Heater",
+    price: 119.99,
+    description: "1500W convection panel heater. Features ECO function and digital controls with 24-hour timer.",
+    company: "DeLonghi",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 13,
+    name: "Lasko Cyclonic Ceramic Heater",
+    price: 69.99,
+    description:
+      "1500W cyclonic ceramic heater. Features 2 quiet settings and adjustable thermostat with digital display.",
+    company: "Lasko",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 14,
+    name: "Honeywell 360 Surround Heater",
+    price: 69.99,
+    description:
+      "1500W surround heat output. Features 2 heat settings, adjustable thermostat, and 360-degree tip-over switch.",
+    company: "Honeywell",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 15,
+    name: "Vornado SRTH Small Room Tower Heater",
+    price: 79.99,
+    description:
+      "1500W small room tower heater. Features V-Flow heat circulation and 2 heat settings with fan-only option.",
+    company: "Vornado",
+    image:
+      "https://images.unsplash.com/photo-1613274554329-70f997f5789f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  ]
+}
+ 
+  
+  // Function to generate product cards
+  function displayProducts() {
+    const productContainer = document.getElementById("product-container");
+  
+    data.Heater.forEach((product) => {
+      const productCard = document.createElement("div");
+      productCard.classList.add("product-card");
+  
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-details">
+          <h2>${product.name}</h2>
+          <p>${product.description}</p>
+          <p class="price">$${product.price}</p>
+          <a href="product-detail.html?id=${product.id}">View Details</a>
+        </div>
+      `;
+  
+      productContainer.appendChild(productCard);
+    });
+  }
+  
+  // Call the function to display products
+  displayProducts();
+  </script>
+</body>
+</html>

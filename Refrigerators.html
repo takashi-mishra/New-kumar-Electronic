@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="product-container" id="product-container">
+
+  </div>
+
+  <script>
+    const data = {
+    refrigerators: [
+            {
+                "id": 1,
+                "name": "LG InstaView Door-in-Door Refrigerator",
+                "price": 2499.99,
+                "description": "31 cu. ft. smart refrigerator with InstaView Door-in-Door design, allowing you to see inside without opening the door. Features a sleek stainless steel finish and advanced cooling technology.",
+                "company": "LG",
+                "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 2,
+                "name": "Whirlpool French Door Refrigerator",
+                "price": 1899.99,
+                "description": "25 cu. ft. French door refrigerator with adjustable shelves, humidity-controlled crispers, and an external water and ice dispenser. Energy Star certified for efficiency.",
+                "company": "Whirlpool",
+                "image": "https://images.unsplash.com/photo-1628509043919-57d2d19b6a5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 3,
+                "name": "Haier Quad Door Refrigerator",
+                "price": 1699.99,
+                "description": "16.4 cu. ft. quad door refrigerator with convertible zone, allowing you to switch between fridge and freezer as needed. Features a modern black stainless steel finish.",
+                "company": "Haier",
+                "image": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 4,
+                "name": "Samsung Family Hub Refrigerator",
+                "price": 3299.99,
+                "description": "27.7 cu. ft. smart refrigerator with a built-in touchscreen and cameras inside. Connect to your smartphone to see contents, manage groceries, and control other smart home devices.",
+                "company": "Samsung",
+                "image": "https://images.unsplash.com/photo-1586208958839-06c17cacdf08?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 5,
+                "name": "LG Side-by-Side Refrigerator",
+                "price": 1599.99,
+                "description": "26 cu. ft. side-by-side refrigerator with SpacePlus Ice System, providing more shelf space and a sleek exterior water and ice dispenser. Features LG's Linear Compressor for optimal temperature control.",
+                "company": "LG",
+                "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 6,
+                "name": "Whirlpool Top Freezer Refrigerator",
+                "price": 899.99,
+                "description": "18 cu. ft. top freezer refrigerator with full-width pantry drawer and adjustable wire shelves. Perfect for smaller kitchens or as a secondary refrigerator.",
+                "company": "Whirlpool",
+                "image": "https://images.unsplash.com/photo-1628509043919-57d2d19b6a5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 7,
+                "name": "Haier Bottom Freezer Refrigerator",
+                "price": 1299.99,
+                "description": "15 cu. ft. bottom freezer refrigerator with reversible doors and quick-cool zone. Features a sleek stainless steel finish and LED lighting for energy efficiency.",
+                "company": "Haier",
+                "image": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 8,
+                "name": "Samsung Bespoke 4-Door Flex Refrigerator",
+                "price": 3799.99,
+                "description": "29 cu. ft. 4-door flex refrigerator with customizable exterior panels. Features a FlexZone compartment that can switch between fridge and freezer temperatures.",
+                "company": "Samsung",
+                "image": "https://images.unsplash.com/photo-1586208958839-06c17cacdf08?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 9,
+                "name": "LG Counter-Depth Refrigerator",
+                "price": 2199.99,
+                "description": "23 cu. ft. counter-depth French door refrigerator with Door-in-Door feature and CustomChill drawer. Provides a built-in look without the built-in price.",
+                "company": "LG",
+                "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 10,
+                "name": "Whirlpool Smart French Door Refrigerator",
+                "price": 2499.99,
+                "description": "28 cu. ft. smart French door refrigerator with fingerprint-resistant stainless steel finish. Features Wi-Fi connectivity and voice control compatibility.",
+                "company": "Whirlpool",
+                "image": "https://images.unsplash.com/photo-1628509043919-57d2d19b6a5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 11,
+                "name": "Haier French Door Refrigerator",
+                "price": 1799.99,
+                "description": "20.6 cu. ft. French door refrigerator with internal water dispenser and quick-cool drawer. Features a space-saving design perfect for apartments or smaller kitchens.",
+                "company": "Haier",
+                "image": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 12,
+                "name": "Samsung Side-by-Side Refrigerator",
+                "price": 1399.99,
+                "description": "28 cu. ft. side-by-side refrigerator with external water and ice dispenser. Features All-Around Cooling to maintain even temperatures throughout the fridge.",
+                "company": "Samsung",
+                "image": "https://images.unsplash.com/photo-1586208958839-06c17cacdf08?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 13,
+                "name": "LG Studio French Door Refrigerator",
+                "price": 4299.99,
+                "description": "24 cu. ft. built-in French door refrigerator with premium design elements. Features a panel-ready design for seamless integration with your kitchen cabinetry.",
+                "company": "LG",
+                "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 14,
+                "name": "Whirlpool Mini Refrigerator",
+                "price": 249.99,
+                "description": "3.1 cu. ft. mini refrigerator with freezer compartment. Perfect for dorm rooms, offices, or as a beverage cooler. Features adjustable thermostat and reversible door.",
+                "company": "Whirlpool",
+                "image": "https://images.unsplash.com/photo-1628509043919-57d2d19b6a5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              },
+              {
+                "id": 15,
+                "name": "Haier Quad French Door Refrigerator",
+                "price": 2099.99,
+                "description": "27.8 cu. ft. quad French door refrigerator with flexible storage options. Features a convertible zone and MySpace customizable drawer for ultimate organization.",
+                "company": "Haier",
+                "image": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              }
+    ],
+  };
+  
+  // Function to generate product cards
+  function displayProducts() {
+    const productContainer = document.getElementById("product-container");
+  
+    data.refrigerators.forEach((product) => {
+      const productCard = document.createElement("div");
+      productCard.classList.add("product-card");
+  
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-details">
+          <h2>${product.name}</h2>
+          <p>${product.description}</p>
+          <p class="price">$${product.price}</p>
+          <a href="product-detail.html?id=${product.id}">View Details</a>
+        </div>
+      `;
+  
+      productContainer.appendChild(productCard);
+    });
+  }
+  
+  // Call the function to display products
+  displayProducts();
+  </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="product-container" id="product-container">
+
+  </div>
+
+  <script>
+    const data = {
+  "tv": [
+  {
+    id: 1,
+    name: "Samsung QLED 4K Smart TV",
+    price: 1299.99,
+    description: "65-inch QLED 4K UHD smart TV with Quantum HDR. Features AI-powered 4K upscaling and Ambient Mode.",
+    company: "Samsung",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 2,
+    name: "LG OLED C1 Series TV",
+    price: 1799.99,
+    description:
+      "55-inch 4K OLED smart TV with AI-powered 4K upscaling. Features NVIDIA G-SYNC and FreeSync Premium for gaming.",
+    company: "LG",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 3,
+    name: "Sony Bravia XR OLED TV",
+    price: 2499.99,
+    description:
+      "77-inch OLED 4K UHD smart TV with cognitive processor XR. Features acoustic surface audio+ and BRAVIA CORE.",
+    company: "Sony",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 4,
+    name: "TCL 6-Series QLED TV",
+    price: 799.99,
+    description:
+      "55-inch QLED 4K UHD smart TV with mini-LED technology. Features THX Certified Game Mode and Dolby Vision HDR.",
+    company: "TCL",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 5,
+    name: "Vizio P-Series Quantum X",
+    price: 1199.99,
+    description:
+      "65-inch 4K HDR smart TV with quantum color technology. Features ProGaming Engine and 240Hz effective refresh rate.",
+    company: "Vizio",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 6,
+    name: "Samsung The Frame QLED TV",
+    price: 1499.99,
+    description:
+      "55-inch QLED 4K UHD smart TV with Art Mode. Features customizable bezels and One Connect Box for clean cable management.",
+    company: "Samsung",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 7,
+    name: "LG NanoCell 90 Series TV",
+    price: 1099.99,
+    description:
+      "75-inch NanoCell 4K UHD smart TV with Full Array Dimming. Features FilmMaker Mode and webOS smart platform.",
+    company: "LG",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 8,
+    name: "Sony X90J 4K LED TV",
+    price: 1399.99,
+    description:
+      "65-inch 4K HDR LED smart TV with Full Array LED and XR Motion Clarity. Features HDMI 2.1 for next-gen gaming.",
+    company: "Sony",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 9,
+    name: "TCL 5-Series QLED TV",
+    price: 549.99,
+    description:
+      "50-inch QLED 4K UHD smart TV with Dolby Vision HDR. Features auto game mode and Roku TV smart platform.",
+    company: "TCL",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 10,
+    name: "Vizio OLED TV",
+    price: 1299.99,
+    description:
+      "55-inch 4K OLED smart TV with perfect black levels. Features ProGaming Engine and SmartCast with Apple AirPlay 2.",
+    company: "Vizio",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 11,
+    name: "Samsung QN90A Neo QLED TV",
+    price: 2199.99,
+    description:
+      "75-inch Neo QLED 4K smart TV with Mini-LED technology. Features Object Tracking Sound+ and anti-reflection screen.",
+    company: "Samsung",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 12,
+    name: "LG G1 Gallery OLED TV",
+    price: 2999.99,
+    description:
+      "65-inch 4K OLED evo smart TV with Gallery Design. Features AI-enhanced picture and sound, and flush wall-mount.",
+    company: "LG",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 13,
+    name: "Sony A80J OLED TV",
+    price: 1999.99,
+    description:
+      "55-inch 4K OLED smart TV with XR OLED Contrast Pro. Features Acoustic Surface Audio+ and Google TV smart platform.",
+    company: "Sony",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 14,
+    name: "TCL 8-Series QLED TV",
+    price: 1999.99,
+    description:
+      "75-inch QLED 4K UHD smart TV with mini-LED backlight. Features Quantum Contrast technology and Auto Game Mode.",
+    company: "TCL",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    id: 15,
+    name: "Vizio M-Series Quantum TV",
+    price: 699.99,
+    description:
+      "55-inch 4K QLED smart TV with local dimming zones. Features VRR for gaming and SmartCast with Chromecast built-in.",
+    company: "Vizio",
+    image:
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+  },
+  ]
+}
+ 
+  
+  // Function to generate product cards
+  function displayProducts() {
+    const productContainer = document.getElementById("product-container");
+  
+    data.tv.forEach((product) => {
+      const productCard = document.createElement("div");
+      productCard.classList.add("product-card");
+  
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-details">
+          <h2>${product.name}</h2>
+          <p>${product.description}</p>
+          <p class="price">$${product.price}</p>
+          <a href="product-detail.html?id=${product.id}">View Details</a>
+        </div>
+      `;
+  
+      productContainer.appendChild(productCard);
+    });
+  }
+  
+  // Call the function to display products
+  displayProducts();
+  </script>
+</body>
+</html>

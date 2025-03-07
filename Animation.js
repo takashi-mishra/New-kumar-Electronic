@@ -1,7 +1,7 @@
 /* auto -text animation */
 
 var typed = new Typed('.auto-text', {
-    strings: ["LG", "Whirlpool", "Haier"],  // Corrected spelling of "Voltas" 
+    strings: ["LG", "Whirlpool", "Haier", "Voltas"],  // Corrected spelling of "Voltas" 
     typeSpeed: 150,
     backSpeed: 30,
     loop: true

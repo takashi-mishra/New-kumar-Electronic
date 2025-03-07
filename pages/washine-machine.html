@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <title>Washing-Machines-page</title>
+</head>
+<body>
+    <h1 class="list">Washing-Machines-List</h1>
+    <div id="products-list" class="products-list">
+          
+    </div>
+
+    <script>
+        fetch('washing-machine.json')  // Corrected: JSON file name should be in quotes
+        .then(response => response.json())
+        .then(products => {
+            const productslist = document.getElementById('products-list');
+            products.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.classList.add('product-card');
+                productElement.innerHTML = `
+                    <img src="${product.image}" alt="img" class = "pimg">
+                    <h1 class = "whit">Brand : ${product.Brand}</h1>
+                  <h1 class = "whit" >Name : ${product.Title}</h1>
+                    <button onclick="viewProduct(${product.id})" class = "switch">View-detail</button>
+                `;
+                productslist.appendChild(productElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching the JSON:', error);
+        });
+
+        function viewProduct(productId) {
+            window.location.href = `washine-machine-detail-page.html?id=${productId}`; // Corrected: Backticks for template string
+        }
+    </script>
+</body>
+</html>

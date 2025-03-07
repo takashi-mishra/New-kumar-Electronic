@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <title>Detail-page</title>
+</head>
+<body>
+    <h1 class="ddt">Detail-page</h1>
+    <div class="products-detail">
+  
+</div>
+
+
+<script>
+ 
+ function clk(img){
+            document.getElementById("main").src = img.src;
+}
+
+
+   const urlparams = new URLSearchParams(window.location.search)
+   const ProductsId = urlparams.get('id')
+
+   fetch('washing-machine.json').then(response => response.json()).then(products =>{
+    const product = products.find(item => item.id === parseInt(ProductsId))
+    if(product){
+        const productDetail = document.querySelector('.products-detail')
+        productDetail.innerHTML =`
+          <div id="card">
+           <div class="varient-card">
+            <img src="${product.image}" alt="main-img"class="varient" onclick="clk(this)"  >
+           <img src="${product.image2}" alt="image-2" class="varient" onclick="clk(this)">
+           <img src="${product.image3}" alt="image-3" class="varient" onclick="clk(this)">
+           <img src="${product.image4}" alt="image-4" class="varient" onclick="clk(this)">
+           </div>
+
+            <img src="${product.image}" alt="main-img"  class="main" id="main">
+    </div>
+
+      <div class="detail">
+         <h2>${product.Description}</h2>
+          <h2>Capacity : ${product.Capacity}</h2>
+          <h2>Brand : ${product.Brand}</h2>
+          <h2>price : <span class="line">${product.overprice}</span>  ${product.Price}</h2>
+    
+
+          <a href="tel:9350758908"> <button class="chh"> Contact-Us</button> </a>
+          <a  href="https://wa.me/9350758908?text=hello i am intresed in...." target="_blank"><button class="chh">Our-Whatsapp</button> </a>
+      </div>
+        
+        `
+  
+
+    }
+   })
+</script>
+</body>
+</html>
+
+

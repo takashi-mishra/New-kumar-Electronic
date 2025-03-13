@@ -41,11 +41,12 @@ body, html {
     height: 50vh;
     display: flex;
     justify-content: space-evenly;
+    gap: 10vw;
     align-items: center;
 }
 
 #first {
-    font-size: 28px;
+    font-size: 34px;
 }
 
 .top {
@@ -80,14 +81,29 @@ body, html {
 }
 
 #dp {
-    width: 50%;
+    position: relative;
+    width: 30%;
     height: 55vh;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid transparent; /* Make the actual border transparent */
+}
+
+#dp::before {
+    content: '';
+    position: absolute;
+    top: -4px; /* Adjust based on border thickness */
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #0c79d3, #09e639, #e60909);
+    z-index: -1; /* Send it behind the image */
 }
 
 #dp img {
     height: 100%;
-    width: 100%;
-    object-fit: cover;
+    width: 100%;   
 }
 
 #page-2 {
@@ -549,7 +565,7 @@ width: 6vw;
         width: 60vw;
     }
     #dp {
-        width: 100%;
+        width: 80%;
         height: 35vh;
     }
     #first {

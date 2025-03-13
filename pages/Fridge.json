@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "image": "../Media-Stock/Screenshot 2025-03-08 094128.png",
+        "image2": "../Media-Stock/Screenshot 2025-03-08 094058.png",
+        "image3": "../Media-Stock/Screenshot 2025-03-08 094153.png",
+        "image4": "../Media-Stock/Screenshot 2025-03-08 094241.png",
+        "Title" : "LG",
+        "Price": "₹15,790", 
+        "overprice":"₹16000",
+        "Capacity": "185 Litres",
+        "Brand": "LG",
+        "Description": "LG 185 L 4 Star Direct-Cool Inverter Single Door Refrigerator (GL-B199OSEY, Scarlet Euphoria, Smart Connect)"
+    }   
+]

@@ -7,7 +7,7 @@
     <title>Washing-Machines-page</title>
 </head>
 <body>
-    <h1 class="list">Washing-Machines-List</h1>
+    <h1 class="list">Refrigerator-List</h1>
     <div id="products-list" class="products-list">
           
     </div>
@@ -19,9 +19,9 @@
             const productslist = document.getElementById('products-list');
             products.forEach(product => {
                 const productElement = document.createElement('div');
-                productElement.classList.add('product-card');
+                productElement.classList.add('product-card-fridge');
                 productElement.innerHTML = `
-                    <img src="${product.image}" alt="img" class = "pimg">
+                    <img src="${product.image}" alt="img" class = "fimg">
                     <h1 class = "whit">Brand : ${product.Brand}</h1>
                   <h1 class = "whit" >Name : ${product.Title}</h1>
                     <button onclick="viewProduct(${product.id})" class = "switch">View-detail</button>

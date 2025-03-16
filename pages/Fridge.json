@@ -1,15 +1,113 @@
 [
     {
         "id": 1,
-        "image": "../Media-Stock/Screenshot 2025-03-08 094128.png",
-        "image2": "../Media-Stock/Screenshot 2025-03-08 094058.png",
-        "image3": "../Media-Stock/Screenshot 2025-03-08 094153.png",
-        "image4": "../Media-Stock/Screenshot 2025-03-08 094241.png",
-        "Title" : "LG",
-        "Price": "₹15,790", 
-        "overprice":"₹16000",
-        "Capacity": "185 Litres",
+        "image": "../Media-Stock/Picture43.png",
+        "image2": "../Media-Stock/Picture44.png",
+        "Title": "Haier",
+        "Price": "₹17,990", 
+        "overprice": "₹20000",
+        "Capacity": "190 Litres",
+        "Brand": "Haier",
+        "Description": "Haier 190 L, 5 Star, Direct-Cool Single Door Refrigerator (HED-205RG, Spiral Glass)"
+    },
+    {
+        "id": 2,
+        "image": "../Media-Stock/Picture45.png",
+        "image2": "../Media-Stock/Picture46.png",
+        "Title": "Haier",
+        "Price": "₹12,790", 
+        "overprice": "₹16000",
+        "Capacity": "190 Litres",
+        "Brand": "haier",
+        "Description": "haier"
+    },
+    {
+        "id": 3,
+        "image": "../Media-Stock/Picture47.png",
+        "image2": "../Media-Stock/Picture48.png",
+        "Title": "whirlpool",
+        "Price": "₹11,790", 
+        "overprice": "₹16000",
+        "Capacity": "184 Litres",
+        "Brand": "whirlpool",
+        "Description": "Whirlpool 184 L 2 Star Direct-Cool Single Door Refrigerator (205 WDE CLS 2S SAPPHIRE BLUE-Z, Blue,2023 Model)"
+    },
+    {
+        "id": 4,
+        "image": "../Media-Stock/Picture49.png",
+        "image2": "../Media-Stock/Picture50.png",
+        "Title": "LG",
+        "Price": "₹16,090", 
+        "overprice": "₹18000",
+        "Capacity": "190 Litres",
+        "Brand": "Haier",
+        "Description": "Haier 190 L, 4 Star, Direct-Cool Single Door Refrigerator (HED-204MDB, Marine Dahelia, Base Stand Drawer)"
+    },
+    {
+        "id": 5,
+        "image": "../Media-Stock/Picture51.png",
+        "image2": "../Media-Stock/Picture52.png",
+        "Title": "Whirlpool",
+        "Price": "₹12,790", 
+        "overprice": "₹16000",
+        "Capacity": "184 Litres",
+        "Brand": "whirlpool",
+        "Description": "Whirlpool 184 L 2 Star Direct-Cool Single Door Refrigerator (205 WDE PRM 2S WINE BLOOM-Z)"
+    },
+    {
+        "id": 6,
+        "image": "../Media-Stock/Picture53.png",
+        "image2": "../Media-Stock/Picture54.png",
+        "Title": "whirlpool 192L",
+        "Price": "₹16,690", 
+        "overprice": "₹19000",
+        "Capacity": "192 Litres",
+        "Brand": "whirlpool",
+        "Description": "Whirlpool 192 L 5 Star Icemagic Powercool Inverter Direct-Cool Single Door Refrigerator (215 IMPC ROY 5S Inv SAPPHIRE MULIA-Z, Base Stand with Drawer)"
+    },
+    {
+        "id": 7,
+        "image": "../Media-Stock/Picture55.png",
+        "image2": "../Media-Stock/Picture56.png",
+        "Title": "Voltas",
+        "Price": "₹15,590", 
+        "overprice": "₹17000",
+        "Capacity": "183 Litres",
+        "Brand": "voltas",
+        "Description": "Voltas Beko, A Tata Product 183 L 2 Star Direct Cool Single Door Refrigerator (RDC215D/S0WBR0M0000GO, Stella Blue, With Fresh Box Technology and Chiller Zone)"
+    },
+    {
+        "id": 8,
+        "image": "../Media-Stock/Picture57.png",
+        "image2": "../Media-Stock/Picture58.png",
+        "Title": "Haier-Fridge",
+        "Price": "₹11,790", 
+        "overprice": "₹15700",
+        "Capacity": "175 Litres",
+        "Brand": "Haier",
+        "Description": "Haier 175 L, 2 Star, Direct-Cool Single Door Refrigerator (HED-182RS-N, Red Mono)"
+    },
+    {
+        "id": 9,
+        "image": "../Media-Stock/Picture59.png",
+        "image2": "../Media-Stock/Picture60.png",
+        "Title": "LG Double Door Refrigerator",
+        "Price": "₹25,990", 
+        "overprice": "₹28000",
+        "Capacity": "242 Litres",
         "Brand": "LG",
-        "Description": "LG 185 L 4 Star Direct-Cool Inverter Single Door Refrigerator (GL-B199OSEY, Scarlet Euphoria, Smart Connect)"
-    }   
+        "Description": "LG 242 L 3 Star Smart Inverter Frost-Free Double Door Refrigerator (GL-I292RPZX, Shiny Steel, Door Cooling+)"
+    },
+    {
+        "id": 10,
+        "image": "../Media-Stock/Picture61.png",
+        "image2": "../Media-Stock/Picture62.png",
+        "Title": "Voltas Double Door Refrigerator",
+        "Price": "₹21,990", 
+        "overprice": "₹25000",
+        "Capacity": "228 Litres",
+        "Brand": "Voltas",
+        "Description": "Voltas Beko, A Tata Product 228 L, 2-Star Made in India Double Door Frost Free Refrigerator with Neo Frost Dual Cooling Technology (RFF265D/W0XIR0I0000GO, Brushed Silver)"
+    }
 ]
+

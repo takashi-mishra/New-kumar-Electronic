@@ -420,9 +420,11 @@ body, html {
 
 #card{
     display: flex;
-    gap: 10px;
-    margin-top: 6vh;
+    gap: 15px;
+    margin-top: 4vh;
     margin-left: 16vw;
+    
+ 
 }
 .line{
     text-decoration: line-through;
@@ -432,15 +434,27 @@ body, html {
 .varient-card{
 display: flex;
 flex-direction:column;
-
 object-fit: cover;
 padding-top: 2vh;
 gap: 2vh;
 }
 
-.varient-card img{
-height: 12vh;
-width: 6vw;
+.varient-card-fridge{
+    display: flex;
+    flex-direction:column; 
+    object-fit: cover;
+    padding-top: 2vh;
+    gap: 2vh;
+    }
+
+    .varient-card img{
+        height: 14vh;
+        width: 6vw;
+        }
+
+.varient-card-fridge img{
+height: 10vh;
+width: 3vw;
 }
 
 .detail{
@@ -459,6 +473,13 @@ width: 6vw;
     width: 28vw;
 }
 
+.main-fridge{
+    height: 90%;
+    width: 90%; 
+    object-fit : cover; 
+    
+}
+
 .chh{
     width: 12vw;
     height: 6vh;
@@ -473,6 +494,27 @@ width: 6vw;
     color: white;
     cursor: pointer; 
 }
+
+/*fridges*/
+.product-card-fridge{
+    flex: 1 1 calc(20% - 20px); 
+    max-width: 20%; 
+    border: 2px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.fimg{
+    height: 80vh;
+    width: 100%;
+   
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
@@ -534,6 +576,10 @@ width: 6vw;
 
 
   .product-card {
+    flex: 1 1 calc(50% - 20px); /* Adjust for 2 products per row */
+    max-width: 50%;
+}
+.product-card-fridge{
     flex: 1 1 calc(50% - 20px); /* Adjust for 2 products per row */
     max-width: 50%;
 }
@@ -660,8 +706,19 @@ width: 6vw;
         max-width: 100%;
     }
 
+    .product-card-fridge{
+        flex: 1 1 100%; /* Full width for each product */
+        max-width: 100%;
+    }
+
     .pimg {
         height: 40vh;
+    }
+
+    
+    .fimg {
+        height: 60vh;
+        width: 60vw;
     }
 
     .switch {
@@ -679,18 +736,38 @@ width: 6vw;
   #card{
   flex-direction: column-reverse;
   margin-left: 3vw;
+  margin-top: 1vh;
   }
 
   .varient-card{
     flex-direction: row;
+  }
+  .varient-card-fridge{
+    flex-direction: row;
+    gap: 9vw;
+    margin-left: 9vw;
+    margin-top: 1vh;
   }
 
   .varient-card img{
     width: 20%;
   }
 
+  .varient-card-fridge img{
+    width: 14%;
+    height: 10vh;
+  }
+
   .main{
     width: 90%;
+  }
+
+  .main-fridge{
+    width: 90%;
+    height: 80vh;
+   
+    margin-left: 3vw;
+   object-fit: contain;
   }
 
   .detail{

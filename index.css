@@ -714,6 +714,7 @@ width: 3vw;
     #continear {
         margin-top: 2vh;
         height: auto;
+        flex-direction: column;
     }
     #dp {
         margin-top: 20px;
@@ -776,6 +777,7 @@ width: 3vw;
     #continear {
         margin-top: 6vh;
         height: auto;
+        flex-direction: column;
     }
 
     #logo {

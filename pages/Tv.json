@@ -1,0 +1,100 @@
+[     
+    {
+        "id": 1,
+        "image": "../Media-Stock/Picture63.png",
+        "image2": "../Media-Stock/Picture64.png",
+        "Title": "LG-Tv",
+        "Price": "₹29990", 
+        "overprice": "₹32800",
+        "Brand": "LG",
+        "Description": "LG 108 cm (43 inches) 4K Ultra HD Smart LED TV 43UR7500PSC (Dark Iron Gray)"
+    },
+    {
+        "id": 2,
+        "image": "../Media-Stock/Picture65.png",
+        "image2": "../Media-Stock/Picture66.png",
+        "Title": "Toshiba 180 cm",
+        "Price": "₹19,999", 
+        "overprice": "₹28000",
+        "Brand": "Toshiba",
+        "Description": "TOSHIBA 108 cm (43 inches) V Series Full HD Smart Android LED TV 43V35MP (Black)"
+    },
+    {
+        "id": 3,
+        "image": "../Media-Stock/Picture67.png",
+        "image2": "../Media-Stock/Picture68.png",
+        "Title": "Panasonic 80 cm",
+        "Price": "₹15,990", 
+        "overprice": "₹20000",
+        
+        "Brand": "panasonic",
+        "Description": "Panasonic 80 cm (32 inches) HD Ready Smart LED Google TV TH32MS660DX (Black)"
+    },
+    {
+        "id": 4,
+        "image": "../Media-Stock/Picture69.png",
+        "image2": "../Media-Stock/Picture70.png",
+        "Title": "LG 80 cm",
+        "Price": "₹13,590", 
+        "overprice": "₹15000",
+       
+        "Brand": "LG",
+        "Description": "LG 80 cm (32 inches) HD Ready Smart LED TV 32LM563BPTC (Dark Iron Gray)"
+    },
+    {
+        "id": 5,
+        "image": "../Media-Stock/Picture71.png",
+        "image2": "../Media-Stock/Picture72.png", 
+        "Title": "TCL 79.97 cm",
+        "Price": "₹10,590", 
+        "overprice": "₹15000",
+       
+        "Brand": "TCl 79.97",
+        "Description": "TCL 79.97 cm (32 inches) Metallic Bezel-Less HD Ready Smart Android LED TV 32L4B (Black)"
+    },
+    {
+        "id": 6,
+        "image": "../Media-Stock/Picture73.png",
+        "image2": "../Media-Stock/Picture74.png",
+        "Title": "Haier",
+        "Price": "₹17,990", 
+        "overprice": "₹20000",
+        "Capacity": "190 Litres",
+        "Brand": "Haier",
+        "Description": "Haier 190 L, 5 Star, Direct-Cool Single Door Refrigerator (HED-205RG, Spiral Glass)"
+    },
+    {
+        "id": 7,
+        "image": "../Media-Stock/Picture75.png",
+        "image2": "../Media-Stock/Picture76.png",
+        "Title": "Haier",
+        "Price": "₹17,990", 
+        "overprice": "₹20000",
+        "Capacity": "190 Litres",
+        "Brand": "Haier",
+        "Description": "Haier 190 L, 5 Star, Direct-Cool Single Door Refrigerator (HED-205RG, Spiral Glass)"
+    },
+    {
+        "id": 8,
+        "image": "../Media-Stock/Picture77.png",
+        "image2": "../Media-Stock/Picture78.png",
+        "Title": "Haier",
+        "Price": "₹17,990", 
+        "overprice": "₹20000",
+        "Capacity": "190 Litres",
+        "Brand": "Haier",
+        "Description": "Haier 190 L, 5 Star, Direct-Cool Single Door Refrigerator (HED-205RG, Spiral Glass)"
+    },
+    {
+        "id": 9,
+        "image": "../Media-Stock/Picture79.png",
+        "image2": "../Media-Stock/Picture80.png",
+        "Title": "Haier",
+        "Price": "₹17,990", 
+        "overprice": "₹20000",
+        "Capacity": "190 Litres",
+        "Brand": "Haier",
+        "Description": "Haier 190 L, 5 Star, Direct-Cool Single Door Refrigerator (HED-205RG, Spiral Glass)"
+    }
+   
+]

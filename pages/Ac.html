@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <title>High Resolution Televisions</title>
+</head>
+<body>
+    <h1 class="list">Televisions-List</h1>
+    <div id="products-list" class="products-list-tv">
+          
+    </div>
+
+    <script>
+        fetch('Tv.json')  // Corrected: JSON file name should be in quotes
+        .then(response => response.json())
+        .then(products => {
+            const productslist = document.getElementById('products-list');
+            products.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.classList.add('product-card-Tv');
+                productElement.innerHTML = `
+                    <img src="${product.image}" alt="img" class = "Tv-img">
+                      <div id="img-div2">
+                        <h1 class = "">Brand : ${product.Brand}</h1>
+                        <h1 class = "" >Name : ${product.Title}</h1>
+                        <button onclick="viewProduct(${product.id})" class = "">View-detail</button>
+                     </div>
+                   
+                `;
+                productslist.appendChild(productElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching the JSON:', error);
+        });
+
+        function viewProduct(productId) {
+            window.location.href = `Tv-detail-page.html?id=${productId}`; // Corrected: Backticks for template string
+        }
+    </script>
+</body>
+</html>
